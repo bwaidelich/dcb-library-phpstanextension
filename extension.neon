@@ -1,0 +1,5 @@
+services:
+  -
+    class: Wwwision\DCBLibraryPHPStanExtension\CompositeProjectionExtension
+    tags:
+      - phpstan.broker.dynamicStaticMethodReturnTypeExtension

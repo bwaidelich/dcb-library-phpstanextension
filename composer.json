@@ -1,0 +1,55 @@
+{
+  "name": "wwwision/dcb-library-phpstanextension",
+  "description": "",
+  "type": "phpstan-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bastian Waidelich",
+      "email": "b.waidelich@wwwision.de"
+    }
+  ],
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/bwaidelich"
+    },
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.me/bwaidelich"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "phpstan/phpstan": "^1.10",
+    "wwwision/dcb-eventstore": "@dev",
+    "wwwision/dcb-library": "@dev"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "phpunit/phpunit": "^10.1"
+  },
+  "extra": {
+    "phpstan": {
+      "includes": [
+        "extension.neon"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Wwwision\\DCBLibraryPHPStanExtension\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Wwwision\\DCBLibraryPHPStanExtension\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test-unit": "phpunit tests",
+    "test": [
+      "@test-unit"
+    ]
+  }
+}
